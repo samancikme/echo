@@ -46,13 +46,13 @@ const Main_load = () => {
                             />
                         </div>
 
-                        <div className="text-[34px] font-display text-center text-white font-semibold">
+                        <div className="text-[34px] font-display text-center leading-10 text-white font-semibold">
                             Learn a language easily with cards
                         </div>
                         <div className="text-xl text-center text-gray-400">
                             Learn words using cards, choosing levels that are convenient for you
                         </div>
-                        <button className="mt-8 bg-yellow-400 text-black font-bold py-3 px-6 rounded-xl hover:bg-yellow-300 transition">
+                        <button className="mt-8 bg-yellow-400 text-black font-bold py-3 px-6 w-full active:scale-95 rounded-xl hover:bg-yellow-300 transition">
                             Get started
                         </button>
                     </motion.div>
