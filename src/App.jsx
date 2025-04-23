@@ -9,7 +9,6 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={<MainLayout />}>
         <Route path='/' element={<Main_load />} />
-        {/* <Route path='/' element={<Echo />} /> */}
       </Route>
     )
   )

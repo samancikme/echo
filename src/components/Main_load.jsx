@@ -1,38 +1,63 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import image from '../assets/main_books.png';
+import Echo from './Echo';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Main_load = () => {
-    const [imageLoaded, setImageLoaded] = useState(false);
+    const [showMain, setShowMain] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowMain(true);
+        }, 5000);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
-        <div className='w-screen h-screen select-none'>
-            <div className="flex flex-col items-center  h-full gap-4">
-                <div className='w-full h-[400px] flex items-center justify-center'>
-                    {!imageLoaded && (
-                        <div className="w-full h-full bg-gray-800 rounded-md animate-pulse" />
-                    )}
-                    <img
-                        src={image}
-                        alt="main"
-                        className={`w-full h-full object-contain transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-                        onLoad={() => setImageLoaded(true)} />
-                </div>
+        <div className="w-screen h-screen relative overflow-hidden  select-none">
+            <AnimatePresence mode="wait">
+                {!showMain && (
+                    <motion.div
+                        key="echo"
+                        initial={{ opacity: 1 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute w-full h-full"
+                    >
+                        <Echo />
+                    </motion.div>
+                )}
 
-                <div className="flex flex-col gap-4">
-                    <div className='text-[34px] font-display text-center leading-12 font-semibold text-white'>
-                        Learn a language easily with cards
-                    </div>
-                    <div className="text-xl font-displayR text-center text-gray-500">
-                        Learn words using cards, choosing levels that are convenient for you
-                    </div>
-                </div>
+                {showMain && (
+                    <motion.div
+                        key="mainload"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute w-full h-full flex flex-col items-center justify-center"
+                    >
+                        <div className="w-full h-[400px] flex items-center justify-center">
+                            <img
+                                src={image}
+                                alt="main"
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
 
-                <div className="w-full flex bottom-[64px]"> 
-                    <button className='text-black font-bold bg-button-yellow hover:bg-button-yellow-hover  text-xl py-[12px] px-auto rounded-[16px] w-full active:scale-95 transition duration-300'>
-                        Get started
-                    </button>
-                </div>
-            </div>
+                        <div className="text-[34px] font-display text-center text-white font-semibold">
+                            Learn a language easily with cards
+                        </div>
+                        <div className="text-xl text-center text-gray-400">
+                            Learn words using cards, choosing levels that are convenient for you
+                        </div>
+                        <button className="mt-8 bg-yellow-400 text-black font-bold py-3 px-6 rounded-xl hover:bg-yellow-300 transition">
+                            Get started
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };
