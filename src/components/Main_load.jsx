@@ -54,7 +54,7 @@ const Main_load = () => {
                                 Learn words using cards, choosing levels that are convenient for you
                             </div>
                         </div >
-                        <button className="mt-8 bg-yellow-400 text-black font-bold py-3 px-6 w-full active:scale-95 rounded-xl hover:bg-yellow-300 transition">
+                        <button className="mt-8 bg-yellow-400 text-black text-[20px] font-bold py-3 px-6 w-full active:scale-95 rounded-xl hover:bg-yellow-300 transition">
                             Get started
                         </button>
                     </motion.div>
