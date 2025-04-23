@@ -5,7 +5,7 @@ const Main_load = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <div className='w-screen h-screen'>
+        <div className='w-screen h-screen select-none'>
             <div className="flex flex-col items-center  h-full gap-4">
                 <div className='w-full h-[400px] flex items-center justify-center'>
                     {!imageLoaded && (
