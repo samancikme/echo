@@ -2,6 +2,8 @@
 
 @theme {
   --color-dark-bg: #14161b;
+  --color-button-yellow: #F1CC06;
+  --color-button-yellow-hover: #f1b206;
 }
 @font-face {
   font-family: display;
