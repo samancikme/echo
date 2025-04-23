@@ -7,10 +7,13 @@ const Main_load = () => {
                 <div className=''>
                     <img src={image} alt="" />
                 </div>
-                <div className="">
-                    <h3 className='text-3xl text-center font-bold text-white'>
+                <div className="flex flex-col gap-4">
+                    <div className='text-4xl font-display text-center font-bold text-white'>
                         Learn a language easily with cards
-                    </h3>
+                    </div>
+                    <div className="text-xl font-displayR text-center font-bold text-gray-500">
+                        Learn words using cards, choosing levels that are convenient for you
+                    </div>
                 </div>
             </div>
         </div>

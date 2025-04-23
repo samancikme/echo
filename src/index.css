@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-    --color-dark-bg: #14161B;
-}  
+  --color-dark-bg: #14161b;
+}
+@font-face {
+  font-family: display;
+  font-style: normal;
+  font-display: swap;
+  src: url("./sf-pro-display/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("woff2");
+  font-family: displayR;
+  font-style: normal;
+  font-display: swap;
+  src: url("./sf-pro-display/SFPRODISPLAYREGULAR.OTF") format("woff2");
+}
+
+@theme {
+  --font-display: "display", "sans-serif";
+  --font-displayR: "displayR", "sans-serif";
+}

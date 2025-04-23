@@ -8,8 +8,8 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainLayout />}>
-        {/* <Route path='/' element={<Main_load />} /> */}
-        <Route path='/' element={<Echo />} />
+        <Route path='/' element={<Main_load />} />
+        {/* <Route path='/' element={<Echo />} /> */}
       </Route>
     )
   )
