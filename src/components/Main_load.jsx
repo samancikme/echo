@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import image from '../assets/main_books.png';
 import Echo from './Echo';
 import { motion, AnimatePresence } from 'framer-motion';
+import Button from './Button';
+import DuckAnimation from './DuckAnimation';
 
 const Main_load = () => {
     const [showMain, setShowMain] = useState(false);
@@ -39,11 +41,7 @@ const Main_load = () => {
                         className="absolute w-full h-full flex flex-col items-center justify-center"
                     >
                         <div className="w-full h-[400px] flex items-center justify-center">
-                            <img
-                                src={image}
-                                alt="main"
-                                className="w-full h-full object-contain"
-                            />
+                            <DuckAnimation/>
                         </div>
 
                         <div className='flex flex-col items-center justify-center gap-4'>
@@ -54,9 +52,9 @@ const Main_load = () => {
                                 Learn words using cards, choosing levels that are convenient for you
                             </div>
                         </div >
-                        <button className="mt-8 bg-yellow-400 text-black text-[20px] font-bold py-3 px-6 w-full active:scale-95 rounded-xl hover:bg-yellow-300 transition">
+                        <Button>
                             Get started
-                        </button>
+                        </Button>
                     </motion.div>
                 )}
             </AnimatePresence>
