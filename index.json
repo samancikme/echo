@@ -1,0 +1,24 @@
+[
+  {
+    "tg_id": 18711054,
+    "gems": 500,
+    "learned_words": 0,
+    "is_register" : false,
+    "categories": {
+      "A1": {
+        "words": [
+          {
+            "category_id" : 1,
+            "id": 1,
+            "word": "apple",
+            "translation": "яблоко",
+            "type": "noun",
+            "description": "A fruit that is typically red, green, or yellow.",
+            "transcription": "ˈæp.əl",
+            "learn": 0
+          }
+        ]
+      }
+    }
+  }
+]

@@ -6,6 +6,11 @@ import Main_load from './components/Main_load'
 import Native_lang from './components/Native_lang'
 
 function App() {
+  const user = window.Telegram.WebApp.initDataUnsafe.user;
+  console.log(user.id); // Bu foydalanuvchining Telegram ID'si
+  console.log(user.first_name); // Foydalanuvchining ismi
+  console.log(user.username); // Telegram username
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<MainLayout />}>
