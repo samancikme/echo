@@ -10,6 +10,8 @@ function App() {
   console.log(user.id); // Bu foydalanuvchining Telegram ID'si
   console.log(user.first_name); // Foydalanuvchining ismi
   console.log(user.username); // Telegram username
+  alert(`User ID: ${user.id}\nFirst Name: ${user.first_name}`);
+
 
   const router = createBrowserRouter(
     createRoutesFromElements(
