@@ -6,18 +6,18 @@
   --color-button-yellow-hover: #f1b206;
 }
 @font-face {
-  font-family: display;
+  font-family: sf_R;
   font-style: normal;
   font-display: swap;
-  src: url("./sf-pro-display/SFPRODISPLAYMEDIUM.OTF") format("woff2");
+  src: url("./sf-pro-display/SF_REGULAR.OTF") format("woff2");
 
-  font-family: displayR;
+  font-family: sf_B;
   font-style: normal;
   font-display: swap;
-  src: url("./sf-pro-display/SFPRODISPLAYREGULAR.OTF") format("woff2");
+  src: url("./sf-pro-display/SF_BOLD.OTF") format("woff2");
 }
 
 @theme {
-  --font-display: "display", "sans-serif";
-  --font-displayR: "displayR", "sans-serif";
+  --font-sf_R: "sf_R", "sans-serif";
+  --font-sf_B: "sf_B", "sans-serif";
 }

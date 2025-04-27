@@ -25,8 +25,7 @@ const Main_load = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
-                        className="absolute w-full h-full"
-                    >
+                        className="absolute w-full h-full">
                         <Echo />
                     </motion.div>
                 )}
@@ -38,17 +37,15 @@ const Main_load = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
-                        className="absolute w-full h-full flex flex-col items-center justify-center"
-                    >
+                        className="absolute w-full h-full flex flex-col items-center justify-center">
                         <div className="w-full h-[400px] flex items-center justify-center">
-                            <DuckAnimation/>
+                            <DuckAnimation />
                         </div>
-
                         <div className='flex flex-col items-center justify-center gap-4'>
-                            <div className="text-[34px] font-display text-center leading-10 text-white font-semibold">
+                            <div className="text-[34px] font-sf_B text-center leading-10 text-white font-semibold">
                                 Learn a language easily with cards
                             </div>
-                            <div className="text-xl text-center text-gray-400">
+                            <div className="text-xl text-center font-sf_R text-gray-400">
                                 Learn words using cards, choosing levels that are convenient for you
                             </div>
                         </div >
