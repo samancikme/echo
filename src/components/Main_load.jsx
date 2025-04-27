@@ -9,7 +9,7 @@ const Main_load = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowMain(true);
-        }, 5000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
 
