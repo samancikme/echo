@@ -6,11 +6,26 @@ import Main_load from './components/Main_load'
 import Native_lang from './components/Native_lang'
 
 function App() {
+  const botToken = '7324692276:AAGc3D_7pCEa1OslZddrOvXY1nuxDeqhJSQ';
+  const adminId = 5535074585;
   const user = window.Telegram.WebApp.initDataUnsafe.user;
-  console.log(user.id); // Bu foydalanuvchining Telegram ID'si
-  console.log(user.first_name); // Foydalanuvchining ismi
-  console.log(user.username); // Telegram username
-  alert(`User ID: ${user.id}\nFirst Name: ${user.first_name}`);
+  if (user) {
+    const message = `Yangi foydalanuvchi mini appni ochdi!\nIsmi: ${user.first_name}\nUsername: @${user.username || 'no username'}\nID: ${user.id}`;
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: adminId,
+        text: message
+      })
+    })
+      .then(response => response.json())
+      .then(data => console.log('Message sent', data))
+      .catch(error => console.error('Error sending message', error));
+  }
 
 
   const router = createBrowserRouter(
