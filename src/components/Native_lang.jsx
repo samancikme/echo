@@ -26,7 +26,7 @@ const NativeLang = () => {
     };
 
     return (
-        <div className='w-full select-none h-screen flex flex-col justify-between pb-[64px] items-center pt-[24px]'>
+        <div className='w-full select-none h-screen flex flex-col justify-between pb-[50px] items-center pt-[24px]'>
             <div>
                 <div className="text-2xl font-sf_B text-center text-white font-semibold px-[40px] mb-8">
                     Choose your native language
@@ -35,7 +35,7 @@ const NativeLang = () => {
                     {languages.map((language) => (
                         <div
                             key={language.id}
-                            className={`w-full py-4 px-6 rounded-[16px] cursor-pointer transition-all gap-[8px] flex justify-between ${selectedLanguage?.id === language.id
+                            className={`w-full py-[13px] px-6 rounded-[16px] cursor-pointer transition-all gap-[8px] flex justify-between ${selectedLanguage?.id === language.id
                                 ? 'border-[#F1CC06] border shadow-lg'
                                 : 'border border-gray-700'}`}
                             onClick={() => handleLanguageSelect(language)}>
@@ -61,7 +61,7 @@ const NativeLang = () => {
             </div>
             <div className="w-full">
                 <Button>
-                    <span className={`text-2xl ${selectedLanguage ? 'text-[#14161b]' : 'text-[#14161b85]'}`}>
+                    <span className={`text-[20px] font-sf_R ${selectedLanguage ? 'text-[#14161b]' : 'text-[#14161b85]'}`}>
                         Next
                     </span>
                 </Button>
